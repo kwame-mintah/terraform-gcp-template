@@ -62,5 +62,7 @@ remote_state {
 
 inputs = {
   gcp_region   = "${local.gcp_region}"
+  gcp_project  = "${local.gcp_project_id}"
+  gcp_zone     = "${local.gcp_zone}"
   project_name = "${local.project_name}"
 }
