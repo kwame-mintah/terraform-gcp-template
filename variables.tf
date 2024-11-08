@@ -1,6 +1,7 @@
 variable "gcp_default_labels" {
   description = <<-EOF
-  The default region to manage resources in.
+  Labels that will be applied to all resources with a top level labels field or a labels
+  field nested inside a top level metadata field.
 
 EOF
 
