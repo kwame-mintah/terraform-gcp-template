@@ -6,9 +6,9 @@
 
 locals {
   project_name   = "terraform-gcp-template"
-  gcp_project_id = ""
-  gcp_region     = "europe-west2"
-  gcp_zone       = "europe-west2-a"
+  gcp_project_id = read_terragrunt_config("environment.hcl").locals.project_id
+  gcp_region     = read_terragrunt_config("environment.hcl").locals.region
+  gcp_zone       = read_terragrunt_config("environment.hcl").locals.zone
   # Could use `find_in_parent_folders()` if file was in the parent directory.
   environment      = read_terragrunt_config("environment.hcl")
   environment_name = local.environment.locals.environment_name
